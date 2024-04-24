@@ -1,0 +1,35 @@
+name: ui
+description: A new Flutter package project.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.18.0
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:
+    - assets/images/
+  fonts:
+    - family: sf_pro
+      fonts:
+        - asset: assets/fonts/SFProText-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/SFProText-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/SFProText-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/SFProText-Bold.ttf
+          weight: 700

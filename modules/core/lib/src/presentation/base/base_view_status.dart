@@ -1,0 +1,1 @@
+enum BaseViewStatus { loading, empty, failed, success }
