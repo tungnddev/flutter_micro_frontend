@@ -2,6 +2,7 @@ import 'package:core/core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_micro_frontend/presentation/localization/localization.dart';
 import 'package:ui/ui.dart';
 
 import '../environments/environment.dart';
@@ -42,13 +43,14 @@ class MyAppState extends State<MyApp> {
     return AnnotatedRegion(
       value: SystemUiOverlayStyle.dark,
       child: GetMaterialApp(
-        title: 'Flutter Demo',
+        title: 'Flutter Micro Frontend',
         theme: uiTheme,
         debugShowCheckedModeBanner: false,
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
+          AppLocalization.delegate,
           ...FlavorConfig.env.modules.localizationsDelegates
         ],
         locale: const Locale('vi'),

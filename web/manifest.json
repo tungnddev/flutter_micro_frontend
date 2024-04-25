@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Flutter Mircro Front-end",
+    "description": "Flutter Micro Front-end",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

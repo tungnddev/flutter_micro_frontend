@@ -1,0 +1,5 @@
+arb-dir: lib/presentation/localization
+template-arb-file: intl_en.arb
+synthetic-package: false
+output-dir: lib/presentation/localization/generated
+output-class: AppLocalizationImp

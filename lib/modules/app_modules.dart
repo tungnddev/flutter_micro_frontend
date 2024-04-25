@@ -15,7 +15,7 @@ class AppModules extends BaseModule {
 
   @override
   List<LocalizationsDelegate> get localizationsDelegates =>
-      [UI.localizationsDelegate];
+      [Core.localizationsDelegate, UI.localizationsDelegate];
 
   @override
   List<GetPage> get pages => [];
