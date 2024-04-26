@@ -9,4 +9,6 @@ abstract class BaseModule {
   void initEnv();
 
   List<GetPage> get pages;
+
+  Future<void> bindingDependencies();
 }

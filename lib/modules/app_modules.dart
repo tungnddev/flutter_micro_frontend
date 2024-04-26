@@ -1,3 +1,4 @@
+import 'package:auth/auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_micro_frontend/modules/base_module.dart';
 import 'package:core/core.dart';
@@ -14,9 +15,18 @@ class AppModules extends BaseModule {
   }
 
   @override
-  List<LocalizationsDelegate> get localizationsDelegates =>
-      [Core.localizationsDelegate, UI.localizationsDelegate];
+  List<LocalizationsDelegate> get localizationsDelegates => [
+        Core.localizationsDelegate,
+        UI.localizationsDelegate,
+        Auth.localizationsDelegate
+      ];
 
   @override
-  List<GetPage> get pages => [];
+  List<GetPage> get pages => [...Auth.pages];
+
+  @override
+  Future<void> bindingDependencies() async {
+    await CoreDataBinding().dependencies();
+    await Auth.bindings.dependencies();
+  }
 }

@@ -16,6 +16,7 @@ class MainRoutePages {
     GetPage(
         name: MainRouteName.home,
         page: () => const HomeScreen(),
-        binding: HomeBinding()),
+        binding: HomeBinding(),
+        transitionDuration: const Duration(seconds: 0)),
   ];
 }

@@ -12,11 +12,14 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_native_splash: ^2.3.7
   core:
     path: ./modules/core
   ui:
     path: ./modules/ui
-  cupertino_icons: ^1.0.2
+  auth:
+    path: ./modules/auth
 
 dev_dependencies:
   flutter_test:

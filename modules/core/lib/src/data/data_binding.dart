@@ -6,6 +6,5 @@ class CoreDataBinding extends Bindings {
   @override
   Future dependencies() async {
     RemoveServiceBinding().dependencies();
-    LocalServiceBinding().dependencies();
   }
 }

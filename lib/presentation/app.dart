@@ -3,23 +3,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_micro_frontend/presentation/localization/localization.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:ui/ui.dart';
 
 import '../environments/environment.dart';
-import 'main_bindings.dart';
 import 'routes.dart';
 
 void startApp() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   Logger.root.onRecord.listen((record) {
     if (kDebugMode) {
       print('${record.level.name}: ${record.time}: ${record.message}');
     }
   });
   FlavorConfig.env.modules.initEnv();
-  await Future.wait([
-    MainBindings().dependencies(),
-  ]);
+  await FlavorConfig.env.modules.bindingDependencies();
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       statusBarBrightness: Brightness.dark));
@@ -53,7 +52,7 @@ class MyAppState extends State<MyApp> {
           AppLocalization.delegate,
           ...FlavorConfig.env.modules.localizationsDelegates
         ],
-        locale: const Locale('vi'),
+        locale: Get.deviceLocale,
         supportedLocales: const [
           Locale.fromSubtags(languageCode: 'en'),
           Locale.fromSubtags(languageCode: 'vi'),
