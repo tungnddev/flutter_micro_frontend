@@ -20,6 +20,8 @@ dependencies:
     path: ./modules/ui
   auth:
     path: ./modules/auth
+  product:
+    path: ./modules/product
 
 dev_dependencies:
   flutter_test:

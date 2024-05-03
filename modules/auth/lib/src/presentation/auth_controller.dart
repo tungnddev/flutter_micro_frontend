@@ -23,13 +23,15 @@ class AuthController with BaseHandleController {
     return completer.future;
   }
 
-  bool isAuth() => CheckIsLoggedInUseCase(Get.find<Repository>())
-      .execute()
-      .fold((left) => left, (right) => false);
-
   void loginSuccessfully() {
     if (!completer.isCompleted) {
       completer.complete();
     }
   }
+
+  bool isAuth() => CheckIsLoggedInUseCase(Get.find<Repository>())
+      .execute()
+      .fold((left) => left, (right) => false);
+
+
 }

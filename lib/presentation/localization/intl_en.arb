@@ -1,26 +1,3 @@
 {
-  "homepage": "Home",
-  "account": "Apartment",
-  "communication": "Communication",
-  "title_apartment_information": "Apartment information",
-  "switch_unit_text": "Switching unit...",
-  "message_floating_support": "Contact management\nto solve your issue",
-  "floating_action_third_party": "More services",
-  "floating_action_scroll_to_top": "Back to top",
-  "tour_guide_title_1": "Tap to pay fees now",
-  "tour_guide_title_2": "Latest news",
-  "tour_guide_title_3": "Create helpdesk quickly",
-  "tour_guide_title_4": "Smart building",
-  "tour_guide_title_5": "Advance utilities",
-  "tour_guide_content_1": "Payment for service fees is simple and easy",
-  "tour_guide_content_2": "Immediately update the latest information of the building",
-  "tour_guide_content_3": "Timely report issues to the Building Management Board",
-  "tour_guide_content_4": "Tap to instantly explore services in your building",
-  "tour_guide_content_5": "Suggested living space care services.",
-  "tour_guide_step": "Step",
-  "tour_guide_back": "Back",
-  "tour_guide_continue": "Keep going",
-  "tour_guide_start": "Start",
-  "title_account":"Account",
-  "title_account_information":"Account information"
+
 }

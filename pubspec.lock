@@ -579,6 +579,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.4"
+  product:
+    dependency: "direct main"
+    description:
+      path: "modules/product"
+      relative: true
+    source: path
+    version: "0.0.1"
   prompts:
     dependency: transitive
     description:
