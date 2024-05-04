@@ -25,6 +25,8 @@ dependencies:
   equatable: ^2.0.5
   ui:
     path: ../ui
+  get_it: ^7.6.7
+  collection: ^1.17.2
 
 dev_dependencies:
   flutter_test:

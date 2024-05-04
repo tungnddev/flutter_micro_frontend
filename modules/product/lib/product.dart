@@ -1,4 +1,4 @@
 library product;
 
-export 'src/product.dart';
+export 'src/product_module.dart';
 export 'src/widgets/widgets.dart';

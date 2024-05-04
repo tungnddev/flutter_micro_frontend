@@ -7,6 +7,6 @@ class LoginBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut(() => LoginController());
-    Get.put(LoginUseCase(Get.find<Repository>()));
+    Get.put(LoginUseCase(GetIt.instance.get<Repository>()));
   }
 }

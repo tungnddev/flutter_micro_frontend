@@ -10,7 +10,7 @@ class AuthController with BaseHandleController {
 
   Future<void> auth() {
     completer = Completer();
-    final result = CheckIsLoggedInUseCase(Get.find<Repository>()).execute();
+    final result = CheckIsLoggedInUseCase(GetIt.instance.get<Repository>()).execute();
     result.fold((left) {
       if (left) {
         completer.complete();
@@ -29,7 +29,7 @@ class AuthController with BaseHandleController {
     }
   }
 
-  bool isAuth() => CheckIsLoggedInUseCase(Get.find<Repository>())
+  bool isAuth() => CheckIsLoggedInUseCase(GetIt.instance.get<Repository>())
       .execute()
       .fold((left) => left, (right) => false);
 

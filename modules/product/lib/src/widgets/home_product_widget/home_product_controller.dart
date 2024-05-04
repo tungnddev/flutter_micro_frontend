@@ -3,7 +3,6 @@ import 'package:core/core.dart';
 import '../../data/repository_imp.dart';
 import '../../domain/models/models.dart';
 import '../../domain/use_cases/home_product_use_case.dart';
-import '../../domain/utils/module_const.dart';
 
 class HomeProductController extends BaseController {
   List<ProductItem> items = <ProductItem>[];
@@ -15,7 +14,7 @@ class HomeProductController extends BaseController {
   @override
   void onInit() {
     super.onInit();
-    Get.put(HomeProductUseCase(Get.find<Repository>(tag: ModuleConst.name)));
+    Get.put(HomeProductUseCase(GetIt.instance.get<Repository>()));
     fetchNewData();
   }
 

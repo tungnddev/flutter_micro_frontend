@@ -18,7 +18,7 @@ void startApp() async {
     }
   });
   FlavorConfig.env.modules.initEnv();
-  await FlavorConfig.env.modules.bindingDependencies();
+  await FlavorConfig.env.modules.inject();
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       statusBarBrightness: Brightness.dark));

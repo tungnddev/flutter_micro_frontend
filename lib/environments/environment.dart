@@ -4,7 +4,7 @@ import '../modules/base_module.dart';
 abstract class Environment {
   final String name;
   final String baseUrl;
-  final BaseModule modules;
+  final BaseModules modules;
 
   const Environment({
     required this.name,

@@ -7,3 +7,5 @@ export 'package:hive/hive.dart';
 export 'package:path_provider/path_provider.dart';
 export 'package:get_storage/get_storage.dart';
 export 'package:dio/dio.dart';
+export 'package:get_it/get_it.dart';
+export 'package:collection/collection.dart';

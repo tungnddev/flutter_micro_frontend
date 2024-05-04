@@ -7,7 +7,7 @@ class SplashController extends BaseController {
   @override
   void onReady() async {
     super.onReady();
-    final isAuth = Auth.isAuth();
+    final isAuth = AuthModule.instance.isAuth();
     if (isAuth) {
       // do other task
       _goToHome();
@@ -15,7 +15,7 @@ class SplashController extends BaseController {
       return;
     }
     FlutterNativeSplash.remove();
-    await Auth.start();
+    await AuthModule.instance.start();
     _goToHome();
   }
 

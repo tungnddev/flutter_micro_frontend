@@ -1,8 +1,8 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
-abstract class BaseModule {
-  const BaseModule();
+abstract class BaseModules {
+  const BaseModules();
 
   List<LocalizationsDelegate<dynamic>> get localizationsDelegates;
 
@@ -10,5 +10,5 @@ abstract class BaseModule {
 
   List<GetPage> get pages;
 
-  Future<void> bindingDependencies();
+  Future<void> inject();
 }

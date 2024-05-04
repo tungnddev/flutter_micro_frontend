@@ -1,3 +1,3 @@
 library auth;
 
-export 'src/auth.dart';
+export 'src/auth_module.dart';
