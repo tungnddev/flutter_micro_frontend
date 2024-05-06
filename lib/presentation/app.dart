@@ -58,7 +58,7 @@ class MyAppState extends State<MyApp> {
           Locale.fromSubtags(languageCode: 'vi'),
         ],
         initialRoute: MainRouteName.splash,
-        getPages: [...MainRoutePages.pages, ...FlavorConfig.env.modules.pages],
+        getPages: [...MainRoutePages.pages],
       ),
     );
   }

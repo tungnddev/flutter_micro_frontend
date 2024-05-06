@@ -8,6 +8,7 @@ class LoginScreen extends GetWidget<LoginController> {
 
   @override
   Widget build(BuildContext context) {
+    Get.put<LoginController>(LoginController());
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(12),

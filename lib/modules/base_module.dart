@@ -8,7 +8,5 @@ abstract class BaseModules {
 
   void initEnv();
 
-  List<GetPage> get pages;
-
   Future<void> inject();
 }

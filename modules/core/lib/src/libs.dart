@@ -1,4 +1,4 @@
-export 'package:get/get.dart' hide FormData, MultipartFile, Response;
+export 'package:get/get.dart' hide FormData, MultipartFile, Response, Transition;
 export 'package:json_annotation/json_annotation.dart';
 export 'package:logging/logging.dart';
 export 'package:retrofit/retrofit.dart' hide Headers;
@@ -9,3 +9,4 @@ export 'package:get_storage/get_storage.dart';
 export 'package:dio/dio.dart';
 export 'package:get_it/get_it.dart';
 export 'package:collection/collection.dart';
+export 'package:flutter_bloc/flutter_bloc.dart';

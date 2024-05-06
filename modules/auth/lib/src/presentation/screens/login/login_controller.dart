@@ -1,9 +1,10 @@
+import 'package:auth/src/domain/repository.dart';
 import 'package:auth/src/domain/use_cases/login_use_case.dart';
 import 'package:auth/src/presentation/auth_controller.dart';
-import 'package:auth/src/presentation/models/field_vm.dart';
 import 'package:core/core.dart';
 
 import '../../routes.dart';
+import 'field_vm.dart';
 
 class LoginController extends BaseController {
   final Rx<FieldVM> username = FieldVM("").obs;
@@ -26,11 +27,12 @@ class LoginController extends BaseController {
 
   void startLogin() async {
     showLoadingDialog();
-    final Either<void, AppException> result = await Get.find<LoginUseCase>()
-        .execute(username.value.content, password.value.content);
+    final Either<void, AppException> result =
+        await LoginUseCase(GetIt.instance.get<Repository>())
+            .execute(username.value.content, password.value.content);
     hideLoadingDialog();
     result.fold((left) {
-      Get.find<AuthController>().loginSuccessfully();
+      GetIt.instance.get<AuthController>().loginSuccessfully();
     }, (right) {
       showError(right);
       return;

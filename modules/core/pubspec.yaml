@@ -27,6 +27,7 @@ dependencies:
     path: ../ui
   get_it: ^7.6.7
   collection: ^1.17.2
+  flutter_bloc: ^8.1.5
 
 dev_dependencies:
   flutter_test:

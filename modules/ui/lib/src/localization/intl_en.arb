@@ -1,4 +1,6 @@
 {
     "dialog_message_done_button": "Done",
-    "dialog_message_title": "Notice"
+    "dialog_message_title": "Notice",
+    "required_info": "Required info",
+    "invalid_input": "Invalid input"
 }

@@ -15,7 +15,7 @@ class SplashController extends BaseController {
       return;
     }
     FlutterNativeSplash.remove();
-    await AuthModule.instance.start();
+    await AuthModule.instance.start(Get.context!);
     _goToHome();
   }
 

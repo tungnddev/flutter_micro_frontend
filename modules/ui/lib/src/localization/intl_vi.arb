@@ -1,4 +1,6 @@
 {
     "dialog_message_done_button": "Xong",
-    "dialog_message_title": "Thông báo"
+    "dialog_message_title": "Thông báo",
+    "required_info": "Thông tin bắt buộc",
+    "invalid_input": "Dữ liệu không hợpn lệ"
 }

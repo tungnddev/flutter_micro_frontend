@@ -11,7 +11,4 @@ class _CoreModuleImp extends CoreModule {
   @override
   LocalizationsDelegate get localizationsDelegate =>
       ModuleLocalization.delegate;
-
-  @override
-  List<GetPage> get pages => [];
 }

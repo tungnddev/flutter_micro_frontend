@@ -11,7 +11,4 @@ class _ProductModuleImp extends ProductModule {
   @override
   LocalizationsDelegate get localizationsDelegate =>
       ModuleLocalization.delegate;
-
-  @override
-  List<GetPage> get pages => RoutePages.pages;
 }

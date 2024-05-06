@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 
 import 'data/injection.dart';
 import 'presentation/localization/localization.dart';
-import 'presentation/routes.dart';
 
 part 'product_module_imp.dart';
 

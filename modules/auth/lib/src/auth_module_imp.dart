@@ -6,7 +6,7 @@ class _AuthModuleImp extends AuthModule {
   @override
   Future<void> inject() async {
     await DataInjection().inject();
-    Get.put<AuthController>(AuthController());
+    GetIt.instance.registerSingleton(AuthController());
   }
 
   @override
@@ -14,15 +14,12 @@ class _AuthModuleImp extends AuthModule {
       ModuleLocalization.delegate;
 
   @override
-  Future<void> start() {
-    return Get.find<AuthController>().auth();
+  Future<void> start(BuildContext context) {
+    return GetIt.instance.get<AuthController>().auth(context);
   }
 
   @override
   bool isAuth() {
-    return Get.find<AuthController>().isAuth();
+    return GetIt.instance.get<AuthController>().isAuth();
   }
-
-  @override
-  List<GetPage> get pages => RoutePages.pages;
 }
