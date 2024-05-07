@@ -1,12 +1,11 @@
 import 'package:auth/src/presentation/localization/localization.dart';
 import 'package:auth/src/presentation/screens/login_v2/login_form_key.dart';
 import 'package:core/core.dart';
-import 'package:core/src/presentation/base_bloc/base_navigator/base_navigator_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:ui/ui.dart';
 import 'login_bloc.dart';
 
-class LoginScreen extends BaseBlocScreen<LoginBloc> {
+class LoginScreen extends BaseBlocWidget<LoginBloc> {
   final _formKey = GlobalKey<FormBuilderState>();
 
   LoginScreen({super.key});

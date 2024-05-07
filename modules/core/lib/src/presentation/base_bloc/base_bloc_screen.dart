@@ -6,9 +6,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:core/src/domain/domain.dart';
 import '../screens/base_handle_view.dart';
 
-abstract class BaseBlocScreen<B extends BaseBloc> extends StatelessWidget
+abstract class BaseBlocWidget<B extends BaseBloc> extends StatelessWidget
     with BaseHandleView {
-  BaseBlocScreen({super.key});
+  BaseBlocWidget({super.key});
 
   B buildBloc(BaseNavigatorBloc navigatorBloc);
 
@@ -30,12 +30,16 @@ abstract class BaseBlocScreen<B extends BaseBloc> extends StatelessWidget
                 break;
               case BaseNavigatorStateShowLoading():
                 showLoadingDialog(context);
+                break;
               case BaseNavigatorStateHideLoading():
                 hideLoadingDialog(context);
+                break;
               case BaseNavigatorStateShowError():
                 showError(context, next.error);
+                break;
               case BaseNavigatorStateCustomize():
                 handleScreenNavigator(next.customizeNavigator);
+                break;
             }
           },
           child: BlocConsumer<B, BaseBlocState>(
@@ -49,7 +53,7 @@ abstract class BaseBlocScreen<B extends BaseBloc> extends StatelessWidget
                   return failedView(context, state.exception);
                 case BaseBlocLoadingView():
                   return loadingView(context);
-                case BaseStateScreenCustomize():
+                case BaseBlocStateScreenCustomize():
                   return customizeStateView(context, state.stateScreen);
               }
             },
@@ -75,9 +79,12 @@ abstract class BaseBlocScreen<B extends BaseBloc> extends StatelessWidget
   Widget failedView(BuildContext context, AppException appException) =>
       const Center(child: Text('Loaded failed'));
 
-  Widget successView<T>(BuildContext context, T data);
+  Widget successView<D>(BuildContext context, D data) {
+    return const SizedBox();
+  }
 
-  Widget customizeStateView(BuildContext context, BaseStateScreen stateScreen) {
+  Widget customizeStateView(
+      BuildContext context, BaseBlocStateScreen stateScreen) {
     return const SizedBox();
   }
 

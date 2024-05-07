@@ -18,10 +18,10 @@ class BaseBlocLoadFailed extends BaseBlocState {
 
 class BaseBlocLoadingView extends BaseBlocState {}
 
-class BaseStateScreenCustomize extends BaseBlocState {
-  BaseStateScreen stateScreen;
+class BaseBlocStateScreenCustomize extends BaseBlocState {
+  BaseBlocStateScreen stateScreen;
 
-  BaseStateScreenCustomize(this.stateScreen);
+  BaseBlocStateScreenCustomize(this.stateScreen);
 }
 
-class BaseStateScreen {}
+class BaseBlocStateScreen {}

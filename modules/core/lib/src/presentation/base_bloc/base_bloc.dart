@@ -48,13 +48,13 @@ abstract class BaseBloc extends Bloc<BaseBlocEvent, BaseBlocState> {
       Emitter<BaseBlocState> emit, BaseBlocEventScreen event) async {}
 }
 
-extension _EmitterUI on Emitter<BaseBlocState> {
+extension EmitterUI on Emitter<BaseBlocState> {
   void loadingView() => call(BaseBlocLoadingView());
 
   void failedView(AppException error) => call(BaseBlocLoadFailed(error));
 
-  void successfulView<T>(data) => call(BaseBlocStateSuccessful(data));
+  void successfulView<T>(T data) => call(BaseBlocStateSuccessful<T>(data));
 
-  void customizeState(BaseStateScreen state) =>
-      call(BaseStateScreenCustomize(state));
+  void customizeState(BaseBlocStateScreen state) =>
+      call(BaseBlocStateScreenCustomize(state));
 }

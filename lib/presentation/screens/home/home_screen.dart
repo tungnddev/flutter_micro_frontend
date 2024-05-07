@@ -10,6 +10,6 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text('App bar'),
         ),
-        body: const SafeArea(child: HomeProductWidget()));
+        body: SafeArea(child: HomeProductWidget()));
   }
 }
